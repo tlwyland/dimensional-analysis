@@ -1,3 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nursing Dimensional Analysis Practice</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f8fb;
+      margin: 0;
+      color: #243447;
+    }
+
+    header {
+      background-color: #176b87;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 35px auto;
+      padding: 20px;
+    }
+
+    .welcome {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .levels {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .level {
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background-color: #176b87;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    button:hover {
+      background-color: #12576e;
+    }
+
+    button:focus {
+      outline: 3px solid #f4b942;
+      outline-offset: 2px;
+    }
+
+    .flashcard-section {
+      display: none;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .flashcard-section h2 {
+      color: #176b87;
+    }
+
+    .card-counter {
+      color: #687785;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .flashcard {
+      background-color: white;
+      border: 3px solid #176b87;
+      border-radius: 16px;
+      min-height: 240px;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 35px 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+    }
+
+    .flashcard-question {
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    .flashcard-answer {
+      font-size: 32px;
+      font-weight: bold;
+      color: #176b87;
+    }
+
+    .instruction {
+      color: #687785;
+      font-size: 15px;
+    }
+
+    .controls {
+      margin-top: 15px;
+    }
+
+    .secondary {
+      background-color: #607d8b;
+    }
+
+    .secondary:hover {
+      background-color: #4f6873;
+    }
+
+    .practice-note {
+      max-width: 600px;
+      margin: 25px auto 0;
+      padding: 18px;
+      background-color: #e8f5f9;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #687785;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 25px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      .container {
+        margin: 15px auto;
+        padding: 12px;
+      }
+
+      .flashcard {
+        min-height: 210px;
+        padding: 25px 15px;
+      }
+
+      .flashcard-question {
+        font-size: 21px;
+      }
+
+      .flashcard-answer {
+        font-size: 27px;
+      }
+
+      button {
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Nursing Dimensional Analysis Practice</h1>
+  <p>Build confidence in medication calculations one problem at a time.</p>
+</header>
+
+<main class="container">
+
+  <!-- HOME SCREEN -->
+  <section id="home">
+
+    <div class="welcome">
+      <h2>Ready to Practice?</h2>
+
+      <p>
+        Choose a level below or review common nursing conversions
+        with the flashcards.
+      </p>
+    </div>
+
+    <div class="levels">
+
+      <div class="level">
+        <h2>Beginner</h2>
+
+        <p>
+          Practice basic tablet, capsule, and liquid medication calculations.
+        </p>
+
+        <button type="button">
+          Start Beginner
+        </button>
+      </div>
+
+      <div class="level">
+        <h2>Intermediate</h2>
+
+        <p>
+          Practice more challenging medication and weight-based calculations.
+        </p>
+
+        <button type="button">
+          Start Intermediate
+        </button>
+      </div>
+
+      <div class="level">
+        <h2>Conversion Flashcards</h2>
+
+        <p>
+          Review common measurement conversions used in nursing calculations.
+        </p>
+
+        <button type="button" onclick="openFlashcards()">
+          Practice Flashcards
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FLASHCARD SCREEN -->
+  <section id="flashcardSection" class="flashcard-section">
+
+    <h2>Conversion Flashcards</h2>
+
+    <p>
+      Try to answer each conversion before flipping the card.
+    </p>
+
+    <div id="cardCounter" class="card-counter"></div>
+
+    <div
+      class="flashcard"
+      id="flashcard"
+      onclick="flipCard()"
+      role="button"
+      tabindex="0"
+      aria-label="Conversion flashcard. Click to flip."
+    >
+      <div id="cardText" class="flashcard-question"></div>
+    </div>
+
+    <p class="instruction">
+      Click the card or select Flip Card to reveal the answer.
+    </p>
+
+    <div class="controls">
+
+      <button type="button" class="secondary" onclick="previousCard()">
+        ← Previous
+      </button>
+
+      <button type="button" onclick="flipCard()">
+        Flip Card
+      </button>
+
+      <button type="button" class="secondary" onclick="nextCard()">
+        Next →
+      </button>
+
+      <button type="button" onclick="shuffleCards()">
+        Shuffle
+      </button>
+
+    </div>
+
+    <div class="practice-note">
+      <strong>Remember:</strong>
+      These conversions will become the conversion factors you use
+      when setting up dimensional-analysis problems.
+    </div>
+
+    <div style="margin-top: 25px;">
+      <button type="button" class="secondary" onclick="goHome()">
+        ← Back to Main Menu
+      </button>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  Nursing Dimensional Analysis Practice
+</footer>
+
+
+<script>
+
+  const originalCards = [
+
+    {
+      question: "How many milligrams are in 1 gram?",
+      answer: "1 g = 1,000 mg"
+    },
+
+    {
+      question: "How many micrograms are in 1 milligram?",
+      answer: "1 mg = 1,000 mcg"
+    },
+
+    {
+      question: "How many milliliters are in 1 liter?",
+      answer: "1 L = 1,000 mL"
+    },
+
+    {
+      question: "How many milliliters are in 1 teaspoon?",
+      answer: "1 tsp = 5 mL"
+    },
+
+    {
+      question: "How many milliliters are in 1 tablespoon?",
+      answer: "1 Tbsp = 15 mL"
+    },
+
+    {
+      question: "How many milliliters are in 1 fluid ounce?",
+      answer: "1 fl oz = 30 mL"
+    },
+
+    {
+      question: "How many ounces are in 1 cup?",
+      answer: "1 cup = 8 oz"
+    },
+
+    {
+      question: "How many cups are in 1 pint?",
+      answer: "1 pint = 2 cups"
+    },
+
+    {
+      question: "How many pints are in 1 quart?",
+      answer: "1 quart = 2 pints"
+    },
+
+    {
+      question: "What is the common nursing conversion between kilograms and pounds?",
+      answer: "1 kg = 2.2 lb"
+    }
+
+  ];
+
+  let cards = [...originalCards];
+
+  let currentCard = 0;
+
+  let showingAnswer = false;
+
+
+  function openFlashcards() {
+
+    document.getElementById("home").style.display = "none";
+
+    document.getElementById("flashcardSection").style.display = "block";
+
+    currentCard = 0;
+
+    showingAnswer = false;
+
+    showCard();
+
+    window.scrollTo(0, 0);
+  }
+
+
+  function showCard() {
+
+    const cardText = document.getElementById("cardText");
+
+    const counter = document.getElementById("cardCounter");
+
+    if (showingAnswer) {
+
+      cardText.textContent = cards[currentCard].answer;
+
+      cardText.className = "flashcard-answer";
+
+    } else {
+
+      cardText.textContent = cards[currentCard].question;
+
+      cardText.className = "flashcard-question";
+    }
+
+    counter.textContent =
+      "Card " + (currentCard + 1) + " of " + cards.length;
+  }
+
+
+  function flipCard() {
+
+    showingAnswer = !showingAnswer;
+
+    showCard();
+  }
 
 
   function nextCard() {
