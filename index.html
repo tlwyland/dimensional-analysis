@@ -48,7 +48,7 @@
 
     .levels {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       margin-top: 30px;
     }
@@ -80,60 +80,65 @@
       padding: 25px;
       color: #687785;
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
+
+      .container {
+        margin: 20px auto;
+        padding: 15px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Nursing Dimensional Analysis Practice</h1>
-  <p>Build confidence in medication calculations one problem at a time.</p>
-</header>
+  <header>
+    <h1>Nursing Dimensional Analysis Practice</h1>
+    <p>Build confidence in medication calculations one problem at a time.</p>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-  <div class="welcome">
-    <h2>Ready to Practice?</h2>
-
-    <p>
-      Choose a level below. Work through each problem using dimensional
-      analysis and check your answer when you are ready.
-    </p>
-  </div>
-
-  <div class="levels">
-
-    <div class="level">
-      <h2>Beginner</h2>
+    <div class="welcome">
+      <h2>Ready to Practice?</h2>
       <p>
-        Practice basic tablet, capsule, and liquid medication calculations.
+        Choose a level below. Work through each problem using dimensional
+        analysis and check your answer when you are ready.
       </p>
-      <button type="button">Start Beginner</button>
     </div>
 
-    <div class="level">
-      <h2>Intermediate</h2>
-      <p>
-        Practice more challenging medication and weight-based calculations.
-      </p>
-      <button type="button">Start Intermediate</button>
-    </div>
+    <div class="levels">
 
-    <div class="level">
-      <h2>NCLEX-Style</h2>
-      <p>
-        Apply dimensional analysis to realistic nursing scenarios.
-      </p>
-      <button type="button">Start NCLEX Practice</button>
+      <div class="level">
+        <h2>Beginner</h2>
+        <p>
+          Practice basic tablet, capsule, and liquid medication calculations.
+        </p>
+        <button type="button">Start Beginner</button>
+      </div>
+
+      <div class="level">
+        <h2>Intermediate</h2>
+        <p>
+          Practice more challenging medication and weight-based calculations.
+        </p>
+        <button type="button">Start Intermediate</button>
+      </div>
+
     </div>
 
   </div>
 
-</div>
+  <footer>
+    Nursing Dimensional Analysis Practice
+  </footer>
 
-<footer>
-  Nursing Dimensional Analysis Practice
-</footer>
+</body>
+</html>
 
 </body>
 </html>
