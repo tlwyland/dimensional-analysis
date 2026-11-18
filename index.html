@@ -12,23 +12,22 @@
   <title>Nursing Dimensional Analysis Practice</title>
 
   <style>
-
     * {
       box-sizing: border-box;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f8fb;
       margin: 0;
+      background-color: #f4f8fb;
       color: #243447;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     header {
+      padding: 35px 20px;
       background-color: #176b87;
       color: white;
       text-align: center;
-      padding: 35px 20px;
     }
 
     header h1 {
@@ -46,24 +45,24 @@
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: 35px auto;
       padding: 20px;
     }
 
     .welcome,
     .category-heading {
-      background-color: white;
       padding: 30px;
+      background-color: white;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
 
     .welcome h2,
     .category-heading h2 {
-      color: #176b87;
       margin-top: 0;
+      color: #176b87;
     }
 
     .levels,
@@ -79,11 +78,11 @@
 
     .level,
     .category-card {
-      background-color: white;
       padding: 28px;
+      background-color: white;
       border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .level h2,
@@ -104,15 +103,15 @@
     }
 
     button {
+      margin: 5px;
+      padding: 12px 20px;
       background-color: #176b87;
       color: white;
       border: none;
-      padding: 12px 20px;
+      border-radius: 8px;
       font-size: 16px;
       font-weight: bold;
-      border-radius: 8px;
       cursor: pointer;
-      margin: 5px;
     }
 
     button:hover {
@@ -154,46 +153,44 @@
     }
 
     .practice-header {
-      text-align: center;
       margin-bottom: 15px;
+      text-align: center;
     }
 
     .practice-header h2 {
-      color: #176b87;
       margin-bottom: 5px;
+      color: #176b87;
     }
 
     .practice-type {
       display: inline-block;
+      margin-top: 5px;
+      padding: 7px 16px;
       background-color: #dff2f7;
       color: #12576e;
-      font-weight: bold;
       border-radius: 20px;
-      padding: 7px 16px;
-      margin-top: 5px;
+      font-weight: bold;
     }
 
     .card-counter {
+      margin: 18px 0 10px;
       color: #5d6c78;
       font-weight: bold;
-      margin: 18px 0 10px;
       text-align: center;
     }
 
     .flashcard {
-      background-color: white;
-      border: 3px solid #176b87;
-      border-radius: 16px;
-      min-height: 275px;
-      max-width: 680px;
-      margin: 15px auto;
-      padding: 35px 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.13);
-
       display: flex;
       align-items: center;
       justify-content: center;
-
+      min-height: 290px;
+      max-width: 700px;
+      margin: 15px auto;
+      padding: 35px 30px;
+      background-color: white;
+      border: 3px solid #176b87;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.13);
       text-align: center;
       cursor: pointer;
     }
@@ -211,25 +208,44 @@
     }
 
     .card-label {
+      margin-bottom: 18px;
       color: #687785;
       font-size: 14px;
       font-weight: bold;
       letter-spacing: 0.5px;
       text-transform: uppercase;
-      margin-bottom: 15px;
     }
 
     .flashcard-question {
-      font-size: 25px;
+      font-size: 30px;
       font-weight: bold;
       line-height: 1.5;
     }
 
     .flashcard-answer {
-      font-size: 25px;
+      color: #243447;
+      font-size: 30px;
       font-weight: bold;
       line-height: 1.5;
+    }
+
+    .blank {
+      display: inline-block;
+      min-width: 95px;
+      padding: 0 8px 5px;
       color: #176b87;
+      border-bottom: 3px solid #176b87;
+    }
+
+    .answer-highlight {
+      display: inline-block;
+      padding: 3px 10px;
+      background-color: #fff2a8;
+      color: #0b6b3a;
+      border: 2px solid #e2c943;
+      border-radius: 7px;
+      font-size: 1.15em;
+      font-weight: bold;
     }
 
     .correct {
@@ -242,21 +258,25 @@
       font-weight: bold;
     }
 
-    .rule-explanation {
+    .rule-explanation,
+    .rounding-work {
       display: block;
+      margin-top: 18px;
       color: #243447;
       font-size: 20px;
       font-weight: normal;
-      margin-top: 18px;
       line-height: 1.5;
     }
 
-    .rounding-work {
-      display: block;
+    .rule-list {
+      max-width: 570px;
+      margin: 18px auto 0;
+      padding-left: 25px;
       color: #243447;
       font-size: 20px;
       font-weight: normal;
-      margin-top: 12px;
+      line-height: 1.6;
+      text-align: left;
     }
 
     .instruction {
@@ -265,13 +285,14 @@
       text-align: center;
     }
 
-    .controls {
+    .controls,
+    .navigation-controls {
+      margin-top: 20px;
       text-align: center;
-      margin-top: 15px;
     }
 
     .study-note {
-      max-width: 680px;
+      max-width: 700px;
       margin: 25px auto 0;
       padding: 18px;
       background-color: #e8f5f9;
@@ -280,19 +301,13 @@
       line-height: 1.5;
     }
 
-    .navigation-controls {
-      text-align: center;
-      margin-top: 25px;
-    }
-
     footer {
-      text-align: center;
       padding: 25px;
       color: #687785;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
-
       header {
         padding: 25px 15px;
       }
@@ -316,17 +331,18 @@
       }
 
       .flashcard {
-        min-height: 280px;
-        padding: 25px 18px;
+        min-height: 300px;
+        padding: 25px 16px;
       }
 
       .flashcard-question,
       .flashcard-answer {
-        font-size: 21px;
+        font-size: 23px;
       }
 
       .rule-explanation,
-      .rounding-work {
+      .rounding-work,
+      .rule-list {
         font-size: 18px;
       }
 
@@ -337,1302 +353,1018 @@
         margin: 8px 0;
       }
     }
-
   </style>
 </head>
 
-
 <body>
 
+  <header>
+    <h1>Nursing Dimensional Analysis Practice</h1>
 
-<header>
+    <p>
+      Build confidence in medication calculations one problem at a time.
+    </p>
+  </header>
 
-  <h1>Nursing Dimensional Analysis Practice</h1>
+  <main class="container">
 
-  <p>
-    Build confidence in medication calculations one problem at a time.
-  </p>
+    <!-- MAIN MENU -->
 
-</header>
+    <section id="homeScreen">
 
-
-<main class="container">
-
-
-  <!-- MAIN MENU -->
-
-  <section id="homeScreen">
-
-    <div class="welcome">
-
-      <h2>Ready to Practice?</h2>
-
-      <p>
-        Practice beginner dimensional analysis or review the
-        conversions and medication-calculation rules you will
-        need to solve dosage problems.
-      </p>
-
-    </div>
-
-
-    <div class="levels">
-
-
-      <!-- BEGINNER PRACTICE -->
-
-      <div class="level">
-
-        <h2>Beginner Dimensional Analysis</h2>
+      <div class="welcome">
+        <h2>Ready to Practice?</h2>
 
         <p>
-          Practice basic tablet, capsule, and liquid medication
-          calculations using dimensional analysis.
+          Practice beginner dimensional analysis or review the
+          conversions and medication-calculation rules needed
+          to solve dosage problems.
         </p>
+      </div>
 
-        <button type="button">
-          Beginner Practice
-        </button>
+      <div class="levels">
+
+        <div class="level">
+          <h2>Beginner Dimensional Analysis</h2>
+
+          <p>
+            Practice basic tablet, capsule, and liquid medication
+            calculations using dimensional analysis.
+          </p>
+
+          <button type="button">
+            Beginner Practice
+          </button>
+        </div>
+
+        <div class="level">
+          <h2>Flashcard Practice</h2>
+
+          <p>
+            Review main conversions, medication-calculation rules,
+            or a mixture of both.
+          </p>
+
+          <button
+            type="button"
+            onclick="openFlashcardMenu()"
+          >
+            Flashcard Practice
+          </button>
+        </div>
 
       </div>
 
+    </section>
 
-      <!-- FLASHCARD PRACTICE -->
+    <!-- FLASHCARD CATEGORY MENU -->
 
-      <div class="level">
+    <section
+      id="flashcardMenu"
+      class="flashcard-menu"
+    >
 
+      <div class="category-heading">
         <h2>Flashcard Practice</h2>
 
         <p>
-          Review main conversions, medication-calculation rules,
-          or a mixture of both.
+          Select what you would like to practice.
         </p>
+      </div>
 
-        <button
-          type="button"
-          onclick="openFlashcardMenu()"
-        >
-          Flashcard Practice
-        </button>
+      <div class="category-buttons">
+
+        <div class="category-card">
+          <h3>Main Conversions</h3>
+
+          <p>
+            Practice 20 fill-in-the-blank conversion cards,
+            including each conversion in both directions.
+          </p>
+
+          <button
+            type="button"
+            onclick="startPractice('conversions')"
+          >
+            Main Conversions
+          </button>
+        </div>
+
+        <div class="category-card rules">
+          <h3>Rules Flashcards</h3>
+
+          <p>
+            Practice medication notation, rounding, ice intake,
+            IV pump programming, and IV drop terminology.
+          </p>
+
+          <button
+            type="button"
+            class="rules-button"
+            onclick="startPractice('rules')"
+          >
+            Rules Flashcards
+          </button>
+        </div>
+
+        <div class="category-card mixed">
+          <h3>Mixed Practice</h3>
+
+          <p>
+            Mix all conversion and rules cards together
+            for a complete review.
+          </p>
+
+          <button
+            type="button"
+            class="mixed-button"
+            onclick="startPractice('mixed')"
+          >
+            Mixed Practice
+          </button>
+        </div>
 
       </div>
 
-
-    </div>
-
-  </section>
-
-
-
-  <!-- FLASHCARD CATEGORY MENU -->
-
-  <section
-    id="flashcardMenu"
-    class="flashcard-menu"
-  >
-
-    <div class="category-heading">
-
-      <h2>Flashcard Practice</h2>
-
-      <p>
-        Select what you would like to practice.
-      </p>
-
-    </div>
-
-
-    <div class="category-buttons">
-
-
-      <!-- MAIN CONVERSIONS -->
-
-      <div class="category-card">
-
-        <h3>Main Conversions</h3>
-
-        <p>
-          Practice the common conversions used in
-          nursing dimensional-analysis problems.
-        </p>
-
+      <div class="navigation-controls">
         <button
           type="button"
-          onclick="startPractice('conversions')"
+          class="secondary-button"
+          onclick="goHome()"
+        >
+          Back to Main Menu
+        </button>
+      </div>
+
+    </section>
+
+    <!-- FLASHCARD PRACTICE SCREEN -->
+
+    <section
+      id="flashcardPractice"
+      class="flashcard-practice"
+    >
+
+      <div class="practice-header">
+        <h2 id="practiceTitle">
+          Flashcard Practice
+        </h2>
+
+        <div
+          id="practiceType"
+          class="practice-type"
         >
           Main Conversions
-        </button>
-
-      </div>
-
-
-
-      <!-- RULES -->
-
-      <div class="category-card rules">
-
-        <h3>Rules Flashcards</h3>
+        </div>
 
         <p>
-          Practice leading zeros, trailing zeros,
-          and rounding rules with examples.
+          Try to fill in the blank or answer the question
+          before flipping the card.
         </p>
-
-        <button
-          type="button"
-          class="rules-button"
-          onclick="startPractice('rules')"
-        >
-          Rules Flashcards
-        </button>
-
       </div>
-
-
-
-      <!-- MIXED PRACTICE -->
-
-      <div class="category-card mixed">
-
-        <h3>Mixed Practice</h3>
-
-        <p>
-          Mix the main conversions and calculation
-          rules together for a complete review.
-        </p>
-
-        <button
-          type="button"
-          class="mixed-button"
-          onclick="startPractice('mixed')"
-        >
-          Mixed Practice
-        </button>
-
-      </div>
-
-
-    </div>
-
-
-    <div class="navigation-controls">
-
-      <button
-        type="button"
-        class="secondary-button"
-        onclick="goHome()"
-      >
-        Back to Main Menu
-      </button>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- FLASHCARD PRACTICE SCREEN -->
-
-  <section
-    id="flashcardPractice"
-    class="flashcard-practice"
-  >
-
-    <div class="practice-header">
-
-      <h2 id="practiceTitle">
-        Flashcard Practice
-      </h2>
 
       <div
-        id="practiceType"
-        class="practice-type"
+        id="cardCounter"
+        class="card-counter"
+        aria-live="polite"
       >
-        Main Conversions
       </div>
 
-      <p>
-        Try to answer before flipping the card.
-      </p>
-
-    </div>
-
-
-    <div
-      id="cardCounter"
-      class="card-counter"
-      aria-live="polite"
-    >
-    </div>
-
-
-    <div
-      id="flashcard"
-      class="flashcard"
-      role="button"
-      tabindex="0"
-      aria-label="Flashcard. Select to flip the card."
-      onclick="flipCard()"
-    >
-
-      <div class="card-content">
-
-        <div
-          id="cardLabel"
-          class="card-label"
-        >
-          Question
-        </div>
-
-        <div
-          id="cardText"
-          class="flashcard-question"
-        >
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <p class="instruction">
-      Select the card or Flip Card to reveal the answer.
-    </p>
-
-
-    <div class="controls">
-
-      <button
-        type="button"
-        class="secondary-button"
-        onclick="previousCard()"
-      >
-        Previous
-      </button>
-
-
-      <button
-        type="button"
+      <div
+        id="flashcard"
+        class="flashcard"
+        role="button"
+        tabindex="0"
+        aria-label="Flashcard. Select to flip the card."
         onclick="flipCard()"
       >
-        Flip Card
-      </button>
 
+        <div class="card-content">
 
-      <button
-        type="button"
-        class="secondary-button"
-        onclick="nextCard()"
+          <div
+            id="cardLabel"
+            class="card-label"
+          >
+            Question
+          </div>
+
+          <div
+            id="cardText"
+            class="flashcard-question"
+          >
+          </div>
+
+        </div>
+
+      </div>
+
+      <p class="instruction">
+        Select the card or Flip Card to reveal the complete answer.
+      </p>
+
+      <div class="controls">
+
+        <button
+          type="button"
+          class="secondary-button"
+          onclick="previousCard()"
+        >
+          Previous
+        </button>
+
+        <button
+          type="button"
+          onclick="flipCard()"
+        >
+          Flip Card
+        </button>
+
+        <button
+          type="button"
+          class="secondary-button"
+          onclick="nextCard()"
+        >
+          Next
+        </button>
+
+        <button
+          type="button"
+          onclick="shuffleCards()"
+        >
+          Shuffle
+        </button>
+
+      </div>
+
+      <div
+        id="studyNote"
+        class="study-note"
       >
-        Next
-      </button>
+        <strong>Study tip:</strong>
+        Say the complete conversion aloud before flipping the card.
+      </div>
+
+      <div class="navigation-controls">
+
+        <button
+          type="button"
+          class="secondary-button"
+          onclick="returnToFlashcardMenu()"
+        >
+          Choose Another Flashcard Group
+        </button>
+
+        <button
+          type="button"
+          class="secondary-button"
+          onclick="goHome()"
+        >
+          Main Menu
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    Nursing Dimensional Analysis Practice
+  </footer>
+
+  <script>
+
+    /*
+      MAIN CONVERSIONS
+      10 CONVERSIONS IN BOTH DIRECTIONS
+      20 TOTAL CARDS
+    */
+
+    const conversionCards = [
+
+      {
+        type: "conversion",
+        question:
+          '1 kg = <span class="blank">_____</span> g',
+        answer:
+          '1 kg = <span class="answer-highlight">1,000</span> g'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1,000 g = <span class="blank">_____</span> kg',
+        answer:
+          '1,000 g = <span class="answer-highlight">1</span> kg'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1 g = <span class="blank">_____</span> mg',
+        answer:
+          '1 g = <span class="answer-highlight">1,000</span> mg'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1,000 mg = <span class="blank">_____</span> g',
+        answer:
+          '1,000 mg = <span class="answer-highlight">1</span> g'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1 mg = <span class="blank">_____</span> mcg',
+        answer:
+          '1 mg = <span class="answer-highlight">1,000</span> mcg'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1,000 mcg = <span class="blank">_____</span> mg',
+        answer:
+          '1,000 mcg = <span class="answer-highlight">1</span> mg'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1 L = <span class="blank">_____</span> mL',
+        answer:
+          '1 L = <span class="answer-highlight">1,000</span> mL'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1,000 mL = <span class="blank">_____</span> L',
+        answer:
+          '1,000 mL = <span class="answer-highlight">1</span> L'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1 mL = <span class="blank">_____</span> cc',
+        answer:
+          '1 mL = <span class="answer-highlight">1</span> cc'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1 cc = <span class="blank">_____</span> mL',
+        answer:
+          '1 cc = <span class="answer-highlight">1</span> mL'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1 oz = <span class="blank">_____</span> mL',
+        answer:
+          '1 oz = <span class="answer-highlight">30</span> mL'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '30 mL = <span class="blank">_____</span> oz',
+        answer:
+          '30 mL = <span class="answer-highlight">1</span> oz'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1 kg = <span class="blank">_____</span> lb',
+        answer:
+          '1 kg = <span class="answer-highlight">2.2</span> lb'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '2.2 lb = <span class="blank">_____</span> kg',
+        answer:
+          '2.2 lb = <span class="answer-highlight">1</span> kg'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1 tsp = <span class="blank">_____</span> mL',
+        answer:
+          '1 tsp = <span class="answer-highlight">5</span> mL'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '5 mL = <span class="blank">_____</span> tsp',
+        answer:
+          '5 mL = <span class="answer-highlight">1</span> tsp'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1 Tbsp = <span class="blank">_____</span> mL',
+        answer:
+          '1 Tbsp = <span class="answer-highlight">15</span> mL'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '15 mL = <span class="blank">_____</span> Tbsp',
+        answer:
+          '15 mL = <span class="answer-highlight">1</span> Tbsp'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '1 cup = <span class="blank">_____</span> mL',
+        answer:
+          '1 cup = <span class="answer-highlight">240</span> mL'
+      },
+
+      {
+        type: "conversion",
+        question:
+          '240 mL = <span class="blank">_____</span> cup',
+        answer:
+          '240 mL = <span class="answer-highlight">1</span> cup'
+      }
+
+    ];
 
 
-      <button
-        type="button"
-        onclick="shuffleCards()"
-      >
-        Shuffle
-      </button>
+    /*
+      RULES FLASHCARDS
+    */
 
-    </div>
+    const rulesCards = [
+
+      {
+        type: "rule",
+
+        question:
+          "Which medication dose is written correctly?" +
+          "<br><br>" +
+          "<strong>0.5 mg</strong>" +
+          "<br>or<br>" +
+          "<strong>.5 mg</strong>",
+
+        answer:
+          '<span class="correct">Correct: ' +
+          '<span class="answer-highlight">0.5 mg</span></span>' +
+
+          '<br><br>' +
+
+          '<span class="incorrect">Incorrect: .5 mg</span>' +
+
+          '<span class="rule-explanation">' +
+          'Always include the zero before the decimal point.' +
+          '</span>'
+      },
+
+      {
+        type: "rule",
+
+        question:
+          "Which medication dose is written correctly?" +
+          "<br><br>" +
+          "<strong>1 mg</strong>" +
+          "<br>or<br>" +
+          "<strong>1.0 mg</strong>",
+
+        answer:
+          '<span class="correct">Correct: ' +
+          '<span class="answer-highlight">1 mg</span></span>' +
+
+          '<br><br>' +
+
+          '<span class="incorrect">Incorrect: 1.0 mg</span>' +
+
+          '<span class="rule-explanation">' +
+          'Do not include a trailing zero.' +
+          '</span>'
+      },
+
+      {
+        type: "rule",
+
+        question:
+          "True or False:" +
+          "<br><br>" +
+          "You should round numbers during every step of a " +
+          "dimensional-analysis problem.",
+
+        answer:
+          '<span class="answer-highlight">False</span>' +
+
+          '<span class="rule-explanation">' +
+          '<strong>Round only the final answer unless otherwise ' +
+          'instructed.</strong>' +
+          '</span>'
+      },
+
+      {
+        type: "rule",
+
+        question:
+          "Round <strong>12.4 units</strong> to the nearest " +
+          "whole number.",
+
+        answer:
+          '12.4 units rounds to ' +
+          '<span class="answer-highlight">12 units</span>.' +
+
+          '<span class="rounding-work">' +
+          'The tenths digit is 4. Because 4 is less than 5, ' +
+          'round down to 12.' +
+          '</span>'
+      },
+
+      {
+        type: "rule",
+
+        question:
+          "Round <strong>12.46 units</strong> to the nearest tenth.",
+
+        answer:
+          '12.46 units rounds to ' +
+          '<span class="answer-highlight">12.5 units</span>.' +
+
+          '<span class="rounding-work">' +
+          'The hundredths digit is 6. Because 6 is 5 or greater, ' +
+          'round the tenths digit from 4 to 5.' +
+          '</span>'
+      },
+
+      {
+        type: "rule",
+
+        question:
+          "The calculated answer is <strong>7.8 mL</strong>." +
+          "<br><br>" +
+          "Round to the nearest whole number.",
+
+        answer:
+          '7.8 mL rounds to ' +
+          '<span class="answer-highlight">8 mL</span>.' +
+
+          '<span class="rounding-work">' +
+          'The tenths digit is 8, so round the whole number up.' +
+          '</span>'
+      },
+
+      {
+        type: "rule",
+
+        question:
+          "The calculated answer is <strong>4.23 mL</strong>." +
+          "<br><br>" +
+          "Round to the nearest tenth.",
+
+        answer:
+          '4.23 mL rounds to ' +
+          '<span class="answer-highlight">4.2 mL</span>.' +
+
+          '<span class="rounding-work">' +
+          'The hundredths digit is 3, so the tenths digit remains 2.' +
+          '</span>'
+      },
+
+      {
+        type: "rule",
+
+        question:
+          "A patient consumes <strong>240 mL of ice</strong>." +
+          "<br><br>" +
+          "How many mL should be recorded as intake?",
+
+        answer:
+          '240 mL of ice ÷ 2 = ' +
+          '<span class="answer-highlight">120 mL intake</span>' +
+
+          '<span class="rule-explanation">' +
+          'Ice is calculated as one-half of the measured amount.' +
+          '</span>'
+      },
+
+      {
+        type: "rule",
+
+        question:
+          "Which unit is used to program an IV infusion pump?",
+
+        answer:
+          'IV pumps are programmed in ' +
+          '<span class="answer-highlight">mL/hr</span>.' +
+
+          '<span class="rule-explanation">' +
+          'This indicates how many milliliters will infuse each hour.' +
+          '</span>'
+      },
+
+      {
+        type: "rule",
+
+        question:
+          "In IV therapy, what does " +
+          "<strong>gtt/mL</strong> describe?",
+
+        answer:
+          '<span class="answer-highlight">gtt/mL</span>' +
+          ' is the <strong>drop factor</strong> of the tubing.' +
+
+          '<span class="rule-explanation">' +
+          'It tells you how many drops are required to make 1 mL.' +
+          '</span>'
+      },
+
+      {
+        type: "rule",
+
+        question:
+          "In IV therapy, what does " +
+          "<strong>gtt/min</strong> describe?",
+
+        answer:
+          '<span class="answer-highlight">gtt/min</span>' +
+          ' is the <strong>drip rate</strong>.' +
+
+          '<span class="rule-explanation">' +
+          'It tells you how many drops should fall each minute.' +
+          '</span>'
+      },
+
+      {
+        type: "rule",
+
+        question:
+          "Which term describes the tubing drop factor, and " +
+          "which term describes the calculated drip rate?" +
+          "<br><br>" +
+          "<strong>gtt/mL</strong> and <strong>gtt/min</strong>",
+
+        answer:
+          '<ul class="rule-list">' +
+          '<li><strong>Drop factor:</strong> ' +
+          '<span class="answer-highlight">gtt/mL</span></li>' +
+          '<li><strong>Drip rate:</strong> ' +
+          '<span class="answer-highlight">gtt/min</span></li>' +
+          '</ul>'
+      }
+
+    ];
 
 
-    <div
-      id="studyNote"
-      class="study-note"
-    >
-      <strong>Study tip:</strong>
-      Say the answer aloud before flipping the card.
-    </div>
+    /*
+      FLASHCARD VARIABLES
+    */
+
+    let activeCards = [];
+    let currentCardIndex = 0;
+    let showingAnswer = false;
+    let activeCategory = "conversions";
 
 
-    <div class="navigation-controls">
+    /*
+      OPEN FLASHCARD MENU
+    */
 
-      <button
-        type="button"
-        class="secondary-button"
-        onclick="returnToFlashcardMenu()"
-      >
-        Choose Another Flashcard Group
-      </button>
+    function openFlashcardMenu() {
+      hideAllScreens();
 
+      document.getElementById(
+        "flashcardMenu"
+      ).style.display = "block";
 
-      <button
-        type="button"
-        class="secondary-button"
-        onclick="goHome()"
-      >
-        Main Menu
-      </button>
-
-    </div>
-
-
-  </section>
-
-
-</main>
-
-
-
-<footer>
-  Nursing Dimensional Analysis Practice
-</footer>
-
-
-
-<script>
-
-
-  /*
-  =========================================
-  MAIN CONVERSION FLASHCARDS
-  =========================================
-  */
-
-
-  const conversionCards = [
-
-
-    {
-      type: "conversion",
-
-      question:
-        "How many grams are in 1 kilogram?",
-
-      answer:
-        '<span class="correct">' +
-        '1 kg = 1,000 g' +
-        '</span>'
-    },
-
-
-    {
-      type: "conversion",
-
-      question:
-        "How many milligrams are in 1 gram?",
-
-      answer:
-        '<span class="correct">' +
-        '1 g = 1,000 mg' +
-        '</span>'
-    },
-
-
-    {
-      type: "conversion",
-
-      question:
-        "How many micrograms are in 1 milligram?",
-
-      answer:
-        '<span class="correct">' +
-        '1 mg = 1,000 mcg' +
-        '</span>'
-    },
-
-
-    {
-      type: "conversion",
-
-      question:
-        "How many milliliters are in 1 liter?",
-
-      answer:
-        '<span class="correct">' +
-        '1 L = 1,000 mL' +
-        '</span>'
-    },
-
-
-    {
-      type: "conversion",
-
-      question:
-        "How many cubic centimeters are in 1 milliliter?",
-
-      answer:
-        '<span class="correct">' +
-        '1 mL = 1 cc' +
-        '</span>'
-    },
-
-
-    {
-      type: "conversion",
-
-      question:
-        "For nursing calculations, approximately how many " +
-        "milliliters are in 1 ounce?",
-
-      answer:
-        '<span class="correct">' +
-        '1 oz = 30 mL' +
-        '</span>'
-    },
-
-
-    {
-      type: "conversion",
-
-      question:
-        "What conversion is used between kilograms and pounds?",
-
-      answer:
-        '<span class="correct">' +
-        '1 kg = 2.2 lb' +
-        '</span>'
-    },
-
-
-    {
-      type: "conversion",
-
-      question:
-        "How many milliliters are in 1 teaspoon?",
-
-      answer:
-        '<span class="correct">' +
-        '1 tsp = 5 mL' +
-        '</span>'
-    },
-
-
-    {
-      type: "conversion",
-
-      question:
-        "How many milliliters are in 1 tablespoon?",
-
-      answer:
-        '<span class="correct">' +
-        '1 Tbsp = 15 mL' +
-        '</span>'
+      window.scrollTo(0, 0);
     }
 
 
-  ];
-
-
-
-  /*
-  =========================================
-  RULES FLASHCARDS
-  =========================================
-  */
-
-
-  const rulesCards = [
-
-
     /*
-    LEADING ZERO
+      START PRACTICE
     */
 
-    {
-      type: "rule",
-
-      question:
-        "Which medication dose is written correctly?" +
-        "<br><br>" +
-        "<strong>0.5 mg</strong>" +
-        "<br>or<br>" +
-        "<strong>.5 mg</strong>",
-
-      answer:
-        '<span class="correct">' +
-        'Correct: 0.5 mg' +
-        '</span>' +
-
-        '<br><br>' +
-
-        '<span class="incorrect">' +
-        'Incorrect: .5 mg' +
-        '</span>' +
-
-        '<span class="rule-explanation">' +
-        'Always include the “0” before the decimal point.' +
-        '</span>'
-    },
-
-
-
-    /*
-    TRAILING ZERO
-    */
-
-    {
-      type: "rule",
-
-      question:
-        "Which medication dose is written correctly?" +
-        "<br><br>" +
-        "<strong>1 mg</strong>" +
-        "<br>or<br>" +
-        "<strong>1.0 mg</strong>",
-
-      answer:
-        '<span class="correct">' +
-        'Correct: 1 mg' +
-        '</span>' +
-
-        '<br><br>' +
-
-        '<span class="incorrect">' +
-        'Incorrect: 1.0 mg' +
-        '</span>' +
-
-        '<span class="rule-explanation">' +
-        'Do not include a trailing zero.' +
-        '</span>'
-    },
-
-
-
-    /*
-    ROUNDING RULE
-    */
-
-    {
-      type: "rule",
-
-      question:
-        "True or False:" +
-        "<br><br>" +
-        "You should round numbers during every step of a " +
-        "dimensional-analysis problem.",
-
-      answer:
-        '<span class="incorrect">' +
-        'False' +
-        '</span>' +
-
-        '<span class="rule-explanation">' +
-        '<strong>' +
-        'Round only the final answer unless otherwise instructed.' +
-        '</strong>' +
-        '</span>'
-    },
-
-
-
-    /*
-    ROUND TO WHOLE NUMBER
-    */
-
-    {
-      type: "rule",
-
-      question:
-        "Round " +
-        "<strong>12.4 units</strong> " +
-        "to the nearest whole number.",
-
-      answer:
-        '<span class="correct">' +
-        '12 units' +
-        '</span>' +
-
-        '<span class="rounding-work">' +
-        'The tenths digit is 4. Because 4 is less than 5, ' +
-        'round down to 12.' +
-        '</span>'
-    },
-
-
-
-    /*
-    ROUND TO TENTH
-    */
-
-    {
-      type: "rule",
-
-      question:
-        "Round " +
-        "<strong>12.46 units</strong> " +
-        "to the nearest tenth.",
-
-      answer:
-        '<span class="correct">' +
-        '12.5 units' +
-        '</span>' +
-
-        '<span class="rounding-work">' +
-        'The hundredths digit is 6. Because 6 is 5 or greater, ' +
-        'round the tenths digit from 4 to 5.' +
-        '</span>'
-    },
-
-
-
-    /*
-    ADDITIONAL WHOLE NUMBER PRACTICE
-    */
-
-    {
-      type: "rule",
-
-      question:
-        "The problem says to round to the nearest whole number." +
-        "<br><br>" +
-        "Your calculated answer is " +
-        "<strong>7.8 mL</strong>." +
-        "<br><br>" +
-        "What is the final answer?",
-
-      answer:
-        '<span class="correct">' +
-        '8 mL' +
-        '</span>' +
-
-        '<span class="rounding-work">' +
-        'The tenths digit is 8, so round the whole number up.' +
-        '</span>'
-    },
-
-
-
-    /*
-    ADDITIONAL TENTH PRACTICE
-    */
-
-    {
-      type: "rule",
-
-      question:
-        "The problem says to round to the nearest tenth." +
-        "<br><br>" +
-        "Your calculated answer is " +
-        "<strong>4.23 mL</strong>." +
-        "<br><br>" +
-        "What is the final answer?",
-
-      answer:
-        '<span class="correct">' +
-        '4.2 mL' +
-        '</span>' +
-
-        '<span class="rounding-work">' +
-        'The hundredths digit is 3, so the tenths digit remains 2.' +
-        '</span>'
-    }
-
-
-  ];
-
-
-
-  /*
-  =========================================
-  FLASHCARD VARIABLES
-  =========================================
-  */
-
-
-  let activeCards = [];
-
-  let currentCardIndex = 0;
-
-  let showingAnswer = false;
-
-  let activeCategory = "conversions";
-
-
-
-  /*
-  =========================================
-  OPEN FLASHCARD MENU
-  =========================================
-  */
-
-
-  function openFlashcardMenu() {
-
-    hideAllScreens();
-
-    document.getElementById(
-      "flashcardMenu"
-    ).style.display = "block";
-
-    window.scrollTo(0, 0);
-
-  }
-
-
-
-  /*
-  =========================================
-  START PRACTICE
-  =========================================
-  */
-
-
-  function startPractice(category) {
-
-
-    activeCategory = category;
-
-
-    /*
-    MAIN CONVERSIONS
-    */
-
-    if (category === "conversions") {
-
-      activeCards =
-        copyCards(conversionCards);
-
-
-      document.getElementById(
-        "practiceTitle"
-      ).textContent =
-        "Main Conversion Flashcards";
-
-
-      document.getElementById(
-        "practiceType"
-      ).textContent =
-        "Main Conversions";
-
-
-      document.getElementById(
-        "studyNote"
-      ).innerHTML =
-        "<strong>Study tip:</strong> " +
-        "Say the entire conversion aloud before flipping the card.";
-
-    }
-
-
-
-    /*
-    RULES
-    */
-
-    else if (category === "rules") {
-
-
-      activeCards =
-        copyCards(rulesCards);
-
-
-      document.getElementById(
-        "practiceTitle"
-      ).textContent =
-        "Rules Flashcards";
-
-
-      document.getElementById(
-        "practiceType"
-      ).textContent =
-        "Rules";
-
-
-      document.getElementById(
-        "studyNote"
-      ).innerHTML =
-        "<strong>Remember:</strong> " +
-        "Use a leading zero, do not use a trailing zero, " +
-        "and round only the final answer unless otherwise instructed.";
-
-    }
-
-
-
-    /*
-    MIXED PRACTICE
-    */
-
-    else {
-
-
-      activeCards =
-        copyCards(
+    function startPractice(category) {
+      activeCategory = category;
+
+      if (category === "conversions") {
+        activeCards = copyCards(conversionCards);
+
+        document.getElementById(
+          "practiceTitle"
+        ).textContent =
+          "Main Conversion Flashcards";
+
+        document.getElementById(
+          "practiceType"
+        ).textContent =
+          "20 Main Conversion Cards";
+
+        document.getElementById(
+          "studyNote"
+        ).innerHTML =
+          "<strong>Study tip:</strong> " +
+          "Fill in the blank, then read the entire conversion " +
+          "aloud after flipping the card.";
+      }
+
+      else if (category === "rules") {
+        activeCards = copyCards(rulesCards);
+
+        document.getElementById(
+          "practiceTitle"
+        ).textContent =
+          "Rules Flashcards";
+
+        document.getElementById(
+          "practiceType"
+        ).textContent =
+          "Medication and Calculation Rules";
+
+        document.getElementById(
+          "studyNote"
+        ).innerHTML =
+          "<strong>Remember:</strong> Use a leading zero, " +
+          "do not use a trailing zero, and round only the final " +
+          "answer unless otherwise instructed.";
+      }
+
+      else {
+        activeCards = copyCards(
           conversionCards.concat(rulesCards)
         );
 
-
-      shuffleArray(activeCards);
-
-
-      document.getElementById(
-        "practiceTitle"
-      ).textContent =
-        "Mixed Flashcard Practice";
-
-
-      document.getElementById(
-        "practiceType"
-      ).textContent =
-        "Conversions and Rules";
-
-
-      document.getElementById(
-        "studyNote"
-      ).innerHTML =
-        "<strong>Mixed review:</strong> " +
-        "These cards combine the main conversions with " +
-        "medication-calculation and rounding rules.";
-
-    }
-
-
-
-    currentCardIndex = 0;
-
-    showingAnswer = false;
-
-
-    hideAllScreens();
-
-
-    document.getElementById(
-      "flashcardPractice"
-    ).style.display = "block";
-
-
-    updateCardStyle();
-
-    showCurrentCard();
-
-    window.scrollTo(0, 0);
-
-  }
-
-
-
-  /*
-  =========================================
-  DISPLAY CURRENT CARD
-  =========================================
-  */
-
-
-  function showCurrentCard() {
-
-
-    if (activeCards.length === 0) {
-      return;
-    }
-
-
-    const currentCard =
-      activeCards[currentCardIndex];
-
-
-    const cardText =
-      document.getElementById(
-        "cardText"
-      );
-
-
-    const cardLabel =
-      document.getElementById(
-        "cardLabel"
-      );
-
-
-    const cardCounter =
-      document.getElementById(
-        "cardCounter"
-      );
-
-
-
-    /*
-    ANSWER SIDE
-    */
-
-    if (showingAnswer) {
-
-
-      cardLabel.textContent =
-        "Answer";
-
-
-      cardText.innerHTML =
-        currentCard.answer;
-
-
-      cardText.className =
-        "flashcard-answer";
-
-    }
-
-
-
-    /*
-    QUESTION SIDE
-    */
-
-    else {
-
-
-      cardLabel.textContent =
-        "Question";
-
-
-      cardText.innerHTML =
-        currentCard.question;
-
-
-      cardText.className =
-        "flashcard-question";
-
-    }
-
-
-
-    cardCounter.textContent =
-      "Card " +
-      (currentCardIndex + 1) +
-      " of " +
-      activeCards.length;
-
-  }
-
-
-
-  /*
-  =========================================
-  FLIP CARD
-  =========================================
-  */
-
-
-  function flipCard() {
-
-    showingAnswer =
-      !showingAnswer;
-
-    showCurrentCard();
-
-  }
-
-
-
-  /*
-  =========================================
-  NEXT CARD
-  =========================================
-  */
-
-
-  function nextCard() {
-
-
-    currentCardIndex++;
-
-
-    if (
-      currentCardIndex >=
-      activeCards.length
-    ) {
+        shuffleArray(activeCards);
+
+        document.getElementById(
+          "practiceTitle"
+        ).textContent =
+          "Mixed Flashcard Practice";
+
+        document.getElementById(
+          "practiceType"
+        ).textContent =
+          "Conversions and Rules";
+
+        document.getElementById(
+          "studyNote"
+        ).innerHTML =
+          "<strong>Mixed review:</strong> These cards combine " +
+          "the 20 main conversion cards with medication, " +
+          "rounding, intake, and IV therapy rules.";
+      }
 
       currentCardIndex = 0;
+      showingAnswer = false;
 
+      hideAllScreens();
+
+      document.getElementById(
+        "flashcardPractice"
+      ).style.display = "block";
+
+      updateCardStyle();
+      showCurrentCard();
+      window.scrollTo(0, 0);
     }
 
 
-    showingAnswer = false;
+    /*
+      SHOW CURRENT CARD
+    */
 
-    showCurrentCard();
-
-  }
-
-
-
-  /*
-  =========================================
-  PREVIOUS CARD
-  =========================================
-  */
-
-
-  function previousCard() {
-
-
-    currentCardIndex--;
-
-
-    if (currentCardIndex < 0) {
-
-      currentCardIndex =
-        activeCards.length - 1;
-
-    }
-
-
-    showingAnswer = false;
-
-    showCurrentCard();
-
-  }
-
-
-
-  /*
-  =========================================
-  SHUFFLE CARDS
-  =========================================
-  */
-
-
-  function shuffleCards() {
-
-
-    shuffleArray(activeCards);
-
-
-    currentCardIndex = 0;
-
-    showingAnswer = false;
-
-    showCurrentCard();
-
-  }
-
-
-
-  /*
-  =========================================
-  SHUFFLE ARRAY
-  =========================================
-  */
-
-
-  function shuffleArray(array) {
-
-
-    for (
-      let i = array.length - 1;
-      i > 0;
-      i--
-    ) {
-
-
-      const randomIndex =
-        Math.floor(
-          Math.random() * (i + 1)
-        );
-
-
-      const temporaryItem =
-        array[i];
-
-
-      array[i] =
-        array[randomIndex];
-
-
-      array[randomIndex] =
-        temporaryItem;
-
-    }
-
-  }
-
-
-
-  /*
-  =========================================
-  COPY CARDS
-  =========================================
-  */
-
-
-  function copyCards(cardsToCopy) {
-
-
-    return cardsToCopy.map(
-
-      function(card) {
-
-
-        return {
-
-          type: card.type,
-
-          question: card.question,
-
-          answer: card.answer
-
-        };
-
+    function showCurrentCard() {
+      if (activeCards.length === 0) {
+        return;
       }
 
+      const currentCard =
+        activeCards[currentCardIndex];
+
+      const cardText =
+        document.getElementById("cardText");
+
+      const cardLabel =
+        document.getElementById("cardLabel");
+
+      const cardCounter =
+        document.getElementById("cardCounter");
+
+      if (showingAnswer) {
+        cardLabel.textContent = "Complete Answer";
+        cardText.innerHTML = currentCard.answer;
+        cardText.className = "flashcard-answer";
+      }
+
+      else {
+        cardLabel.textContent = "Fill in the Blank or Answer";
+        cardText.innerHTML = currentCard.question;
+        cardText.className = "flashcard-question";
+      }
+
+      cardCounter.textContent =
+        "Card " +
+        (currentCardIndex + 1) +
+        " of " +
+        activeCards.length;
+    }
+
+
+    /*
+      FLIP CARD
+    */
+
+    function flipCard() {
+      showingAnswer = !showingAnswer;
+      showCurrentCard();
+    }
+
+
+    /*
+      NEXT CARD
+    */
+
+    function nextCard() {
+      currentCardIndex++;
+
+      if (currentCardIndex >= activeCards.length) {
+        currentCardIndex = 0;
+      }
+
+      showingAnswer = false;
+      showCurrentCard();
+    }
+
+
+    /*
+      PREVIOUS CARD
+    */
+
+    function previousCard() {
+      currentCardIndex--;
+
+      if (currentCardIndex < 0) {
+        currentCardIndex = activeCards.length - 1;
+      }
+
+      showingAnswer = false;
+      showCurrentCard();
+    }
+
+
+    /*
+      SHUFFLE CARDS
+    */
+
+    function shuffleCards() {
+      shuffleArray(activeCards);
+
+      currentCardIndex = 0;
+      showingAnswer = false;
+
+      showCurrentCard();
+    }
+
+
+    /*
+      SHUFFLE AN ARRAY
+    */
+
+    function shuffleArray(array) {
+      for (
+        let i = array.length - 1;
+        i > 0;
+        i--
+      ) {
+        const randomIndex =
+          Math.floor(Math.random() * (i + 1));
+
+        const temporaryItem = array[i];
+
+        array[i] = array[randomIndex];
+        array[randomIndex] = temporaryItem;
+      }
+    }
+
+
+    /*
+      COPY CARDS
+    */
+
+    function copyCards(cardsToCopy) {
+      return cardsToCopy.map(
+        function(card) {
+          return {
+            type: card.type,
+            question: card.question,
+            answer: card.answer
+          };
+        }
+      );
+    }
+
+
+    /*
+      UPDATE CARD COLOR
+    */
+
+    function updateCardStyle() {
+      const flashcard =
+        document.getElementById("flashcard");
+
+      flashcard.className = "flashcard";
+
+      if (activeCategory === "rules") {
+        flashcard.classList.add("rule-card");
+      }
+
+      else if (activeCategory === "mixed") {
+        flashcard.classList.add("mixed-card");
+      }
+    }
+
+
+    /*
+      RETURN TO FLASHCARD MENU
+    */
+
+    function returnToFlashcardMenu() {
+      hideAllScreens();
+
+      document.getElementById(
+        "flashcardMenu"
+      ).style.display = "block";
+
+      window.scrollTo(0, 0);
+    }
+
+
+    /*
+      RETURN HOME
+    */
+
+    function goHome() {
+      hideAllScreens();
+
+      document.getElementById(
+        "homeScreen"
+      ).style.display = "block";
+
+      window.scrollTo(0, 0);
+    }
+
+
+    /*
+      HIDE ALL SCREENS
+    */
+
+    function hideAllScreens() {
+      document.getElementById(
+        "homeScreen"
+      ).style.display = "none";
+
+      document.getElementById(
+        "flashcardMenu"
+      ).style.display = "none";
+
+      document.getElementById(
+        "flashcardPractice"
+      ).style.display = "none";
+    }
+
+
+    /*
+      KEYBOARD ACCESSIBILITY
+    */
+
+    document.getElementById(
+      "flashcard"
+    ).addEventListener(
+      "keydown",
+      function(event) {
+        if (
+          event.key === "Enter" ||
+          event.key === " "
+        ) {
+          event.preventDefault();
+          flipCard();
+        }
+      }
     );
 
-  }
-
-
-
-  /*
-  =========================================
-  CARD COLOR
-  =========================================
-  */
-
-
-  function updateCardStyle() {
-
-
-    const flashcard =
-      document.getElementById(
-        "flashcard"
-      );
-
-
-    flashcard.className =
-      "flashcard";
-
-
-    if (
-      activeCategory === "rules"
-    ) {
-
-
-      flashcard.classList.add(
-        "rule-card"
-      );
-
-    }
-
-
-    else if (
-      activeCategory === "mixed"
-    ) {
-
-
-      flashcard.classList.add(
-        "mixed-card"
-      );
-
-    }
-
-  }
-
-
-
-  /*
-  =========================================
-  RETURN TO FLASHCARD MENU
-  =========================================
-  */
-
-
-  function returnToFlashcardMenu() {
-
-
-    hideAllScreens();
-
-
-    document.getElementById(
-      "flashcardMenu"
-    ).style.display =
-      "block";
-
-
-    window.scrollTo(0, 0);
-
-  }
-
-
-
-  /*
-  =========================================
-  RETURN HOME
-  =========================================
-  */
-
-
-  function goHome() {
-
-
-    hideAllScreens();
-
-
-    document.getElementById(
-      "homeScreen"
-    ).style.display =
-      "block";
-
-
-    window.scrollTo(0, 0);
-
-  }
-
-
-
-  /*
-  =========================================
-  HIDE ALL SCREENS
-  =========================================
-  */
-
-
-  function hideAllScreens() {
-
-
-    document.getElementById(
-      "homeScreen"
-    ).style.display =
-      "none";
-
-
-    document.getElementById(
-      "flashcardMenu"
-    ).style.display =
-      "none";
-
-
-    document.getElementById(
-      "flashcardPractice"
-    ).style.display =
-      "none";
-
-  }
-
-
-
-  /*
-  =========================================
-  KEYBOARD ACCESSIBILITY
-  =========================================
-  */
-
-
-  document.getElementById(
-    "flashcard"
-  ).addEventListener(
-
-    "keydown",
-
-    function(event) {
-
-
-      if (
-        event.key === "Enter" ||
-        event.key === " "
-      ) {
-
-
-        event.preventDefault();
-
-        flipCard();
-
-      }
-
-    }
-
-  );
-
-
-</script>
-
+  </script>
 
 </body>
 
